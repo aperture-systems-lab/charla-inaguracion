@@ -1,0 +1,11 @@
+[project]
+name = "inauguracion-aperture"
+version = "0.1.0"
+description = "Inauguración del Semillero Aperture (Data Science e IA) — presentación animada con Manim Slides."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "manim>=0.18",
+    "manim-slides[pyqt6]>=5.1",
+    "numpy>=1.26",
+]
