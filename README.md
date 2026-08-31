@@ -22,8 +22,5 @@ uv run python -m manim_slides render -ql main.py presentation
 
 # Presentar
 uv run python -m manim_slides present presentation
-
-# Exportar a un HTML autocontenido, por si hay que presentar sin el entorno
-uv run python -m manim_slides convert presentation inauguracion.html
 ```
 
