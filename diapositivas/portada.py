@@ -1,6 +1,5 @@
 import numpy as np
 from manim import (
-    DOWN,
     TAU,
     UP,
     Arc,
@@ -40,7 +39,6 @@ ARO_FUERA = (1.38, 2, 0.75, 2.5)
 Y_NOMBRE = -0.45
 Y_RAYA = -1.12
 Y_LINEA_MARCA = -1.7
-Y_LEMA = -2.65
 
 GIRO_APERTURA = 0.52
 VUELTA = 4.6
@@ -86,11 +84,6 @@ def construir(scene):
     linea_marca = texto("SEMILLERO DE DATA SCIENCE E IA", 22, color=CLARO)
     linea_marca.move_to([0, Y_LINEA_MARCA, 0])
 
-    lema = VGroup(
-        texto("No solo estudiamos la IA.", 19, color=SECUNDARIO),
-        texto("La construimos y la llevamos a la realidad.", 19, color=SECUNDARIO),
-    ).arrange(DOWN, buff=0.18).move_to([0, Y_LEMA, 0])
-
     revelado = Group(nucleo, nombre, linea_marca)
 
     hojas = iris(0.0)
@@ -127,7 +120,6 @@ def construir(scene):
     )
 
     scene.play(Create(raya), run_time=0.5)
-    scene.play(FadeIn(lema, shift=UP * 0.12), run_time=0.7)
 
     reloj = ValueTracker(0.0)
     aro_dentro.add_updater(
